@@ -1,0 +1,53 @@
+
+
+ <html>
+	 <head>
+		<title>Menjacnica</title>
+			<script>
+					var exchangeRate = 117.9998;
+				function calculate()
+					{
+						var rsdInput = document.getElementById("rsd");
+						var rsdValue = rsdInput.value;
+						
+						var eurInput = document.getElementById("eur");
+						var eurValue = eurInput.value;  
+						
+						if (rsdValue != "")
+						{
+							eurValue = rsdValue / exchangeRate;
+							eurInput.value = eurValue.toFixed(4);
+						}
+						else if  (eurValue != "")
+						{
+							rsdValue = eurValue * exchangeRate;
+							rsdInput.value = rsdValue.toFixed(4);
+						}
+					}
+			</script>
+	 </head>
+ <body>
+		<form>
+			<h1>Menjacnica</h1>
+				<div>
+					<span><input type="text" id="rsd" placeholder="Iznos u dinarima"</span>
+					<span>RSD</span>
+				</div>
+					<div style="padding:2px;">
+						<span><img src="download.png" width="32px;  "</span>
+						<span>117,9998</span>
+					</div>
+				<div>
+					<span><input type="number" id="eur" placeholder="Iznos u evrima"</span>
+					<span>EUR</span>
+				</div>
+					<div style="padding-top:10px; ">
+						<span><input type="reset" value="Ponisti"</span>
+						<span><button type="button" onclick="calculate()">Konvertuj</button></span>
+					</div>
+		</form>
+ </body>
+ 
+ 
+ 
+ </html>
