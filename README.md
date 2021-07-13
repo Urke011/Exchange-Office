@@ -1,6 +1,6 @@
 # Exchange-Office
 
-A simple exchange office deomostration witout Css only Html and little Js
+A simple exchange office deomostration without Css only Html and little Js
 
 
 
